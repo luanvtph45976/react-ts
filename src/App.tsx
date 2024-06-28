@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import Admin from "./pages/Admin";
 import api from "./apis";
-
+import { Product } from "./interfaces/Product";
 function App() {
-  const [products, setProduct] = useState([]);
+  const [products, setProduct] = useState<Product[]>([]);
   useEffect(() => {
     (async () => {
       const { data } = await api.get("/products");
