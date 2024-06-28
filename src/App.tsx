@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import axios from "axios";
 import Admin from "./pages/Admin";
 
