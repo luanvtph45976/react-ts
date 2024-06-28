@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Product } from "../../interfaces/Product";
 
 type Props = {
@@ -7,6 +8,7 @@ type Props = {
 const Admin = ({ products, removeProduct }: Props) => {
   return (
     <>
+      <Link to="/admin/product-add">Them san pham</Link>
       <table className="table table-bordered table-striped">
         <thead>
           <tr>
