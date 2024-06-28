@@ -10,7 +10,7 @@ function App() {
       setProduct(data);
     })();
   }, []);
-  const removeProduct = async (id: number) => {
+  const removeProduct = async (id: number | undefined) => {
     if (confirm("ban co chac muon xoa khong")) {
       await axios.delete(`http://localhost:3000/products/${id}`);
       const newData = products.filter((item) => item.id !== id);
