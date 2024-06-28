@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Admin from "./pages/Admin";
+import Admin from "./pages/admin/Admin";
 import api from "./apis";
 import { Product } from "./interfaces/Product";
 function App() {
