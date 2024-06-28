@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+
 import Admin from "./pages/Admin";
+import api from "./apis";
 
 function App() {
   const [products, setProduct] = useState([]);
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get("http://localhost:3000/products");
+      const { data } = await api.get("/products");
       setProduct(data);
     })();
   }, []);
-  const removeProduct = async (id: number | undefined) => {
+  const removeProduct = async (id: number) => {
     if (confirm("ban co chac muon xoa khong")) {
-      await axios.delete(`http://localhost:3000/products/${id}`);
+      await api.delete(`/products/${id}`);
       const newData = products.filter((item) => item.id !== id);
       setProduct(newData);
     }
