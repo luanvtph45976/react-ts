@@ -1,10 +1,9 @@
-
 import { useForm } from "react-hook-form";
 import Joi from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
-import { User } from "./../interfaces/User";
+import { User } from "./../interfaces/Users";
 import { useNavigate } from "react-router-dom";
-import instance from "./../axios/index";
+import instance from "./../apis/index";
 
 const userSchema = Joi.object({
   email: Joi.string().required().email({ tlds: false }),
@@ -21,20 +20,20 @@ const Login = () => {
   });
   const onSubmit = (user: User) => {
     (async () => {
-      const { data } = await instance.post(`/login`, user);
+      const { data } = await instance.post(`/register`, user);
       console.log(data);
       if (data.user) {
         sessionStorage.setItem("accessToken", data.accessToken);
         const ifConfirm = confirm("Login Successfully,switch home page");
         if (ifConfirm) {
-          nav("/");
+          nav("/login");
         }
       }
     })();
   };
   return (
     <div className="container">
-      <h1>Login</h1>
+      <h1>Register</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
           <label htmlFor="">Email</label>
