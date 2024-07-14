@@ -1,56 +1,85 @@
 import { useEffect, useState } from "react";
-
-import Admin from "./pages/admin/Admin";
-import api from "./apis";
+import "./App.css";
 import { Product } from "./interfaces/Product";
+import instance from "./apis";
+import Dashboard from "./pages/admin/Dashboard";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+
 import ProductForm from "./pages/admin/ProductForm";
-import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 function App() {
-  const [products, setProduct] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
+
+  const nav = useNavigate();
+
+  const fetchProduct = async () => {
+    const { data } = await instance.get(`/products`);
+    setProducts(data);
+  };
   useEffect(() => {
-    (async () => {
-      const { data } = await api.get("/products");
-      setProduct(data);
-    })();
+    fetchProduct();
   }, []);
-  const removeProduct = async (id: number) => {
-    if (confirm("ban co chac muon xoa khong")) {
-      await api.delete(`/products/${id}`);
-      const newData = products.filter((item) => item.id !== id);
-      setProduct(newData);
+
+  const handleRemove = async (id: number | string) => {
+    if (confirm("Are you sure?")) {
+      await instance.delete(`/products/${id}`);
+      setProducts(products.filter((item) => item.id !== id));
     }
   };
-  const handleProduct = async (data: Partial<Product>) => {
+
+  const onSubmitProduct = async (data: Product) => {
     try {
       if (data.id) {
-        // logic cho edit product
-        await api.patch(`/products/${data.id}`, data);
-        const newData = await api.get("/products");
-        setProduct(newData.data);
+        // edit
+        await instance.patch(`/products/${data.id}`, data);
       } else {
-        // logic cho add product
-        const res = await api.post("/products", data);
-        if (res.data) {
-          setProduct([...products, res.data]);
-        } else {
-          console.error("Invalid response from server");
-        }
+        // add
+        await instance.post("/products", data);
       }
+      fetchProduct();
+      nav("/admin");
     } catch (error) {
-      console.error("Error handling product:", error);
+      console.error(error);
     }
   };
   return (
     <>
+      <header>
+        <ul>
+          <li>
+            <Link to="/register">Register</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        </ul>
+      </header>
       <Routes>
-        <Admin products={products} removeProduct={removeProduct} />
+        {/* Client */}
+        <Route path="/" element={<Home data={products} />} />
+
+        {/* Admin */}
         <Route
-          path="/admin/product-add"
+          path="/admin"
           element={
-            <ProductForm handleProduct={handleProduct} products={products} />
+            <Dashboard products={products} handleRemove={handleRemove} />
           }
         />
+        <Route
+          path="/admin/product-add"
+          element={<ProductForm onSubmitProduct={onSubmitProduct} />}
+        />
+        <Route
+          path="/admin/product-edit/:id"
+          element={<ProductForm onSubmitProduct={onSubmitProduct} />}
+        />
+
+        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );

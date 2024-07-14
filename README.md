@@ -1,30 +1,24 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mẫu này cung cấp thiết lập tối thiểu để React hoạt động trong Vite với HMR và một số quy tắc ESLint.
 
-Currently, two official plugins are available:
+Hiện tại, có hai plugin chính thức:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+@vitejs/plugin-react sử dụng Babel để làm mới nhanh
+@vitejs/plugin-react-swc sử dụng SWC để làm mới nhanh
+Mở rộng cấu hình ESLint
+Nếu đang phát triển một ứng dụng sản xuất, bạn nên cập nhật cấu hình để bật quy tắc tìm lỗi mã nguồn nhận biết loại:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+Định cấu hình thuộc tính ParserOptions cấp cao nhất như thế này:
+xuất mặc định {
+// các quy tắc khác...
+tùy chọn phân tích cú pháp: {
+ecmaVersion: 'mới nhất',
+sourceType: 'mô-đun',
+dự án: ['./tsconfig.json', './tsconfig.node.json'],
+tsconfigRootDir: \_\_dirname,
+},
 }
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Thay thế plugin:@typescript-eslint/recommends thành plugin:@typescript-eslint/recommends-type-checked hoặc plugin:@typescript-eslint/strict-type-checked
+Tùy chọn thêm plugin:@typescript-eslint/stylistic-type-checked
+Cài đặt eslint-plugin-react và thêm plugin:react/recommends & plugin:react/jsx-runtime vào danh sách mở rộng

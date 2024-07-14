@@ -3,23 +3,27 @@ import { Product } from "../../interfaces/Product";
 
 type Props = {
   products: Product[];
-  removeProduct: (id: number) => void;
+  handleRemove: (id: number | string) => void;
 };
-const Admin = ({ products, removeProduct }: Props) => {
+
+const Dashboard = ({ products, handleRemove }: Props) => {
   return (
-    <>
-      <Link to="/admin/product-add">Them san pham</Link>
+    <div>
+      <Link to={`/admin/product-add`} className="btn btn-success">
+        Add new product
+      </Link>
       <table className="table table-bordered table-striped">
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>Title</th>
             <th>Price</th>
             <th>Description</th>
-            <td>Thumbnail</td>
+            <th>Thumbnail</th>
             <th>Action</th>
           </tr>
         </thead>
+
         <tbody>
           {products.map((item) => (
             <tr key={item.id}>
@@ -28,28 +32,28 @@ const Admin = ({ products, removeProduct }: Props) => {
               <td>{item.price}</td>
               <td>{item.description}</td>
               <td>
-                <img
-                  src={item.thumbnail}
-                  alt="thumbnail"
-                  width={200}
-                  height={100}
-                />
+                <img src={item.thumbnail} alt={item.title} width={100} />
               </td>
               <td>
-                <button className="btn btn-primary">Sua</button>
+                <Link
+                  to={`/admin/product-edit/${item.id}`}
+                  className="btn btn-warning"
+                >
+                  Edit
+                </Link>
                 <button
                   className="btn btn-danger"
-                  onClick={() => removeProduct(item.id)}
+                  onClick={() => handleRemove(item.id!)}
                 >
-                  Xoa
+                  Remove
                 </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 
-export default Admin;
+export default Dashboard;
