@@ -4,12 +4,9 @@ import { Product } from "./interfaces/Product";
 import instance from "./apis";
 import Dashboard from "./pages/admin/Dashboard";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
-
 import ProductForm from "./pages/admin/ProductForm";
 import Home from "./pages/Home";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-
+import AuthForm from "./pages/AuthForm";
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -78,8 +75,8 @@ function App() {
         />
 
         {/* <Route path="*" element={<NotFound />} /> */}
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<AuthForm isLogin />} />
+        <Route path="/register" element={<AuthForm />} />
       </Routes>
     </>
   );
