@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
 import { Product } from "../../interfaces/Product";
+import { useContext } from "react";
+import { ProductContext } from "../../contexts/ProductContext";
 
-type Props = {
+type ProductContextType = {
   products: Product[];
   handleRemove: (id: number | string) => void;
 };
 
-const Dashboard = ({ products, handleRemove }: Props) => {
+const Dashboard = () => {
+  const { products, handleRemove } = useContext(
+    ProductContext
+  ) as ProductContextType;
+
   return (
     <div>
-      <Link to={`/admin/product-add`} className="btn btn-success">
+      <Link to={`/admin/product-add`} className="btn btn-primary">
         Add new product
       </Link>
       <table className="table table-bordered table-striped">
