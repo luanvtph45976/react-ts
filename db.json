@@ -2,14 +2,123 @@
   "products": [
     {
       "id": 2,
-      "title": "Eyeshadow Palette with Mirror update",
+      "title": "Eyeshadow uopdate",
       "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
       "category": "beauty",
-      "price": 1999,
+      "price": 205555,
+      "discountPercentage": 5.5,
+      "rating": 3.28,
+      "stock": 44,
+      "tags": [
+        "beauty",
+        "eyeshadow"
+      ],
+      "brand": "Glamour Beauty",
+      "sku": "MVCFH27F",
+      "weight": 3,
+      "dimensions": {
+        "width": 12.42,
+        "height": 8.63,
+        "depth": 29.13
+      },
+      "warrantyInformation": "1 year warranty",
+      "shippingInformation": "Ships in 2 weeks",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Liam Garcia",
+          "reviewerEmail": "liam.garcia@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Very disappointed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Nora Russell",
+          "reviewerEmail": "nora.russell@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Elena Baker",
+          "reviewerEmail": "elena.baker@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 32,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.618Z",
+        "updatedAt": "2024-05-23T08:56:21.618Z",
+        "barcode": "2817839095220",
+        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
+      },
       "images": [
         "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
+    },
+    {
+      "id": 3,
+      "title": "Powder Canister",
+      "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+      "category": "beauty",
+      "price": 1234567890,
+      "discountPercentage": 18.14,
+      "rating": 3.82,
+      "stock": 59,
+      "tags": [
+        "beauty",
+        "face powder"
+      ],
+      "brand": "Velvet Touch",
+      "sku": "9EN8WLT2",
+      "weight": 8,
+      "dimensions": {
+        "width": 24.16,
+        "height": 10.7,
+        "depth": 11.07
+      },
+      "warrantyInformation": "2 year warranty",
+      "shippingInformation": "Ships in 1-2 business days",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Ethan Thompson",
+          "reviewerEmail": "ethan.thompson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Levi Hicks",
+          "reviewerEmail": "levi.hicks@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Hazel Gardner",
+          "reviewerEmail": "hazel.gardner@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "60 days return policy",
+      "minimumOrderQuantity": 25,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.618Z",
+        "updatedAt": "2024-05-23T08:56:21.618Z",
+        "barcode": "0516267971277",
+        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
     },
     {
       "id": 4,
@@ -70,6 +179,66 @@
         "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
+    },
+    {
+      "id": 5,
+      "title": "Red Nail Polish",
+      "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+      "category": "beauty",
+      "price": 8.99,
+      "discountPercentage": 2.46,
+      "rating": 3.91,
+      "stock": 71,
+      "tags": [
+        "beauty",
+        "nail polish"
+      ],
+      "brand": "Nail Couture",
+      "sku": "YUIIIP4W",
+      "weight": 9,
+      "dimensions": {
+        "width": 8.11,
+        "height": 10.89,
+        "depth": 29.06
+      },
+      "warrantyInformation": "1 year warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Leo Rivera",
+          "reviewerEmail": "leo.rivera@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Evan Reed",
+          "reviewerEmail": "evan.reed@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Evelyn Sanchez",
+          "reviewerEmail": "evelyn.sanchez@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "No return policy",
+      "minimumOrderQuantity": 46,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.619Z",
+        "updatedAt": "2024-05-23T08:56:21.619Z",
+        "barcode": "3212847902461",
+        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
     },
     {
       "id": 7,
@@ -200,7 +369,7 @@
       "title": "Dolce Shine Eau de",
       "description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
       "category": "fragrances",
-      "price": 69.99,
+      "price": 69999999,
       "discountPercentage": 11.47,
       "rating": 2.68,
       "stock": 3,
@@ -1391,10 +1560,10 @@
     },
     {
       "id": 29,
-      "title": "Juice update",
+      "title": "Juice",
       "description": "Refreshing fruit juice, packed with vitamins and great for staying hydrated.",
       "category": "groceries",
-      "price": 400,
+      "price": 3.99,
       "discountPercentage": 5.45,
       "rating": 3.41,
       "stock": 99,
@@ -1504,44 +1673,73 @@
         "https://cdn.dummyjson.com/products/images/groceries/Kiwi/1.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png"
+    },
+    {
+      "title": "them san pham",
+      "price": 1000,
+      "description": "mo ta",
+      "id": 31
     }
   ],
   "users": [
     {
-      "email": "email@gmail.com",
-      "password": "$2a$10$76h3UTgEbb/8i6Tue5rcCOdKF2xwX0lzOUhk0yvgmv60e7DJHxHZu",
-      "confirmPass": "111111",
-      "id": 1
-    },
-    {
-      "email": "email111111@gmail.com",
-      "password": "$2a$10$ZZFNDRUTI3pPHkIR/LUAQ.jm.rRnbmBJKwt6h35lxbeBF645K7pvO",
-      "confirmPass": "111111",
-      "id": 2
-    },
-    {
-      "email": "email1111222211@gmail.com",
-      "password": "$2a$10$rdqkKGYbEqj9BVAetaBtQONXyaIQVlqN.UYQ4O2S2uum4NJgq4J6O",
-      "confirmPass": "111111",
-      "id": 3
+      "email": "admin@gmail.com",
+      "password": "$2a$10$Gp6g2TvkmwQKXIC0wSYGg.9004910fE.6iy7llK3p82WaD7KjWAOS",
+      "id": 3,
+      "role": "admin"
     },
     {
       "email": "luan@gmail.com",
-      "password": "$2a$10$xhDP7JGBaLnlDhANXRiuMOz.GGHPJwsdUd54gnYQOsbCFeTAYI.e2",
-      "confirmPass": "123456",
-      "id": 4
+      "password": "$2a$10$pBrWp6DxmSggT1DGhbxOmeEjw4.UXVZRtuNrkXwpYD36niwrTzITu",
+      "id": 5,
+      "role": "admin"
     },
     {
-      "email": "phu123@gmail.com",
-      "password": "$2a$10$4ICOzt46z1hH12pqAJsWHecnFFyoMIG2eznKHrwPLzkBCx6PX1u9G",
-      "confirmPass": "123456",
-      "id": 5
+      "email": "luan12@gmail.com",
+      "password": "$2a$10$NdHZFog5GPGx43/.RkfhPOzTVVWaDnqjb7YHDKCLO/HTU3jiVxiT.",
+      "id": 6,
+      "role": "member"
     },
     {
-      "email": "phungu123@gmail.com",
-      "password": "$2a$10$g5dXXAvFrnW55kfkpxvQdeQdFZob35NX0Sb9B5WRndAQjuulYuBr6",
-      "confirmPass": "123456",
-      "id": 6
+      "email": "taro@gmail.com",
+      "password": "$2a$10$o.Nsv96AD3TsNRA.k4HddOyHdl07Fdp5fLIHdN2r5IXJtFp8dlGcG",
+      "id": 7,
+      "role": "member"
+    },
+    {
+      "email": "phudan@gmail.com",
+      "password": "$2a$10$PMq0ucWkZ.yfN7Z3w2fhAOkI8nFdH3WqxVDuszQB6kXVSL/mB1jda",
+      "id": 8
+    }
+  ],
+  "cart": [
+    {
+      "userID": 4,
+      "products": [
+        {
+          "id": 2,
+          "title": "Eyeshadow uopdate",
+          "price": 1000,
+          "quantity": 10
+        },
+        {
+          "id": 3,
+          "title": "tu lanh",
+          "price": 2000,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "userID": 2,
+      "products": [
+        {
+          "id": 3,
+          "title": "tivi",
+          "price": 2000,
+          "quantity": 3
+        }
+      ]
     }
   ]
 }

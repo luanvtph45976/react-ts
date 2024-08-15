@@ -1,0 +1,168 @@
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+ul1 .corepage {
+  background-color: aqua;
+}
+.corepage:hover {
+  background-color: yellow;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px #ffc107;
+}
+.logo {
+  width: 160px;
+  height: 60px;
+  float: left;
+  margin: 0 50px;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #d9534f;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  text-align: center;
+}
+
+.dashboard-table button {
+  margin-right: 0.5rem;
+}
+
+.dashboard-table .btn-warning {
+  color: #fff;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.dashboard-table .btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+.admin-header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  position: relative;
+}
+
+.admin-avatar {
+  position: relative;
+  cursor: pointer;
+}
+
+.admin-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0.5rem;
+}
+
+.admin-menu button {
+  width: 100%;
+}
+
+.sidebar {
+  background-color: #343a40;
+  color: #fff;
+  min-height: 100vh;
+  padding-top: 1rem;
+  float: left;
+}
+
+.sidebar .nav-link {
+  color: #adb5bd;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+li nav-item {
+  list-style: none;
+}
+
+.sidebar .nav-link {
+  color: #adb5bd;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.nav-item {
+  list-style: none;
+  padding: 10px 44px;
+}
+.nav-item:hover {
+  background-color: #495057;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.ul1 {
+  float: left;
+  margin-left: -30px;
+  padding-left: -40px;
+}
+.sidebar .nav-link.active {
+  color: #fff;
+  background-color: #495057;
+}
+.content {
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+//
+/* Header.scss hoặc một file CSS riêng */
+.sort-options select {
+  margin: 10px;
+  padding: 5px;
+}
+// slide
+.carousel-image {
+  height: 500px; /* Đặt chiều cao cố định cho hình ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}

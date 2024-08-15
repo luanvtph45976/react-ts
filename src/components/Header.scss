@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #dee2e6; /* Hoặc màu nền của bạn */
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav {
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nav > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav li {
+  margin: 0;
+}
+.menu {
+  padding-left: 80px;
+}
+.register1 {
+  border-radius: 10px;
+  background-color: blue;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.register1:hover {
+  background-color: blue;
+}
+.cart1 {
+  float: right;
+  padding-left: 260px;
+}
+.nav li a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: #000;
+
+  padding: 0.5rem 1rem;
+}
+
+.nav li a:hover {
+  background-color: gold; /* Màu hover của bạn */
+  border-radius: 10px;
+  text-decoration: underline;
+  color: blue;
+}
+
+.logo {
+  height: 50px; /* Kích thước logo */
+}
+
+.user-icon,
+.cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logout-button {
+  background-color: #ffc107; /* Màu của nút đăng xuất */
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #e0a800; /* Màu hover của nút đăng xuất */
+}

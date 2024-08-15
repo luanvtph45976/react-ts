@@ -1,63 +1,36 @@
-import Dashboard from "./pages/admin/Dashboard";
 import { Route, Routes } from "react-router-dom";
-import AuthForm from "./pages/AuthForm";
-import Header from "./components/Header";
+import "./App.css";
+import AuthForm from "./components/AuthForm";
+import Home from "./pages/Home";
+import Dashboard from "./pages/admin/Dashboard";
+import ProductForm from "./pages/admin/ProductForm";
+import ProductDetail from "./pages/ProductDetail";
+import ClientLayout from "./components/ClientLayout";
+import AdminLayout from "./components/AdminLayout";
+import Cart from "./pages/Cart";
+import User from "./pages/admin/User";
+
 function App() {
-  // const [products, setProducts] = useState<Product[]>([]);
-
-  // const nav = useNavigate();
-
-  // const fetchProduct = async () => {
-  //   const { data } = await instance.get(`/products`);
-  //   setProducts(data);
-  // };
-  // useEffect(() => {
-  //   fetchProduct();
-  // }, []);
-
-  // const handleRemove = async (id: number | string) => {
-  //   if (confirm("Are you sure?")) {
-  //     await instance.delete(`/products/${id}`);
-  //     setProducts(products.filter((item) => item.id !== id));
-  //   }
-  // };
-
-  // const onSubmitProduct = async (data: Product) => {
-  //   try {
-  //     if (data.id) {
-  //       // edit
-  //       await instance.patch(`/products/${data.id}`, data);
-  //     } else {
-  //       // add
-  //       await instance.post("/products", data);
-  //     }
-  //     fetchProduct();
-  //     nav("/admin");
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
   return (
     <>
-      <Header />
       <Routes>
         {/* Client */}
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<ClientLayout />}>
+          <Route index element={<Home />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="/product-detail/:id" element={<ProductDetail />} />
+        </Route>
 
         {/* Admin */}
-        <Route path="/admin" element={<Dashboard />} />
-        {/* <Route
-          path="/admin/product-add"
-          element={<ProductForm onSubmitProduct={onSubmitProduct} />}
-        />
-        <Route
-          path="/admin/product-edit/:id"
-          element={<ProductForm onSubmitProduct={onSubmitProduct} />}
-        /> */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="/admin/product-add" element={<ProductForm />} />
+          <Route path="/admin/product-edit/:id" element={<ProductForm />} />
+          <Route path="/admin/users" element={<User />} />
+        </Route>
 
-        {/* <Route path="*" element={<NotFound />} /> */}
-        <Route path="/login" element={<AuthForm isLogin />} />
         <Route path="/register" element={<AuthForm />} />
+        <Route path="/login" element={<AuthForm isLogin />} />
       </Routes>
     </>
   );
